@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "March_10_2026", "March_10_2026", "{8E91D3F9-6643-5310-DD7C-A253A2276CBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-AgentFramework-OpenAI", "04-AgentFramework-OpenAI", "{9F1D174B-24C9-48DC-8C65-4DCD500908A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAIHelloWorld", "March_10_2026\04-AgentFramework-OpenAI\OpenAIHelloWorld\OpenAIHelloWorld.csproj", "{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F1D174B-24C9-48DC-8C65-4DCD500908A8} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
+		{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2} = {9F1D174B-24C9-48DC-8C65-4DCD500908A8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4550BF05-1F6F-421D-8737-397CCB901517}
+	EndGlobalSection
+EndGlobal
