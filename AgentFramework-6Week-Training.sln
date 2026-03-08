@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAIHelloWorld", "March_1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureOpenAIHelloWorld", "March_10_2026\05-AgentFramework-AzureOpenAI\AzureOpenAIHelloWorld\AzureOpenAIHelloWorld.csproj", "{CA3E0BC1-FD8E-4E35-B786-B8553BCB003B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnthropicHelloWorld", "March_10_2026\06-AgentFramework-Anthropic\AnthropicHelloWorld\AnthropicHelloWorld.csproj", "{718AA569-20FB-496E-A2D6-CD84D5A7AF18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,18 @@ Global
 		{CA3E0BC1-FD8E-4E35-B786-B8553BCB003B}.Release|x64.Build.0 = Release|Any CPU
 		{CA3E0BC1-FD8E-4E35-B786-B8553BCB003B}.Release|x86.ActiveCfg = Release|Any CPU
 		{CA3E0BC1-FD8E-4E35-B786-B8553BCB003B}.Release|x86.Build.0 = Release|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Debug|x64.Build.0 = Debug|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Debug|x86.Build.0 = Debug|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Release|x64.ActiveCfg = Release|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Release|x64.Build.0 = Release|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Release|x86.ActiveCfg = Release|Any CPU
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +67,7 @@ Global
 		{9F1D174B-24C9-48DC-8C65-4DCD500908A8} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
 		{36A6DE4A-FD4A-ED50-0EED-0B390E2EC5B2} = {9F1D174B-24C9-48DC-8C65-4DCD500908A8}
 		{CA3E0BC1-FD8E-4E35-B786-B8553BCB003B} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
+		{718AA569-20FB-496E-A2D6-CD84D5A7AF18} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4550BF05-1F6F-421D-8737-397CCB901517}
