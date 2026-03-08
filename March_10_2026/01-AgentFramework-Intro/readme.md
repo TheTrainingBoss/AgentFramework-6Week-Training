@@ -58,7 +58,7 @@ That saves:
 Finally, you will also learn how to calculate the time it takes to run your query in milliseconds.
 
 ## How Tokens are counted
-![Tokens Counter](../media/Token_Counter.jpg)
+![Tokens Counter](../../media/Token_Counter.jpg)
 
 ## dotnet user-secrets
 - To initialize your user secrets in your project:
