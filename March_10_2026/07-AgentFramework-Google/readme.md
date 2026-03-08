@@ -1,6 +1,6 @@
-## Getting an apikey from Anthropic
+## Getting your apikey from Google for the use of Gemini models
 
-Use [link](https://platform.claude.com/) to establish an apikey for working with Anthropic models
+Head over to this [link](https://aistudio.google.com/) to get a Google API KEY
 
 The content of the project file is below:
 
@@ -13,36 +13,24 @@ The content of the project file is below:
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Google_GenerativeAI.Microsoft" Version="3.6.3" />
     <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-rc3" />
-    <PackageReference Include="Microsoft.Agents.AI.Anthropic" Version="1.0.0-rc3" />
     <PackageReference Include="Microsoft.Extensions.AI" Version="10.3.0" />
   </ItemGroup>
 </Project>
 ```
 
-
 The content of the `program.cs` file is below:
 
 ```C#
-using Anthropic;
-using Anthropic.Core;
-using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
+using GenerativeAI.Microsoft;
+using Microsoft.Agents.AI;
 using System.Diagnostics;
 
-var client = new AnthropicClient(new ClientOptions
-{
-    ApiKey = "sk-ant-api03-JOhjimepH0gNUIPQSiRqge4P... please use your own key"
-});
 
-ChatClientAgent agent = client.AsIChatClient().AsAIAgent(new ChatClientAgentOptions
-{
-    ChatOptions = new ChatOptions
-    {
-        MaxOutputTokens = 2000,
-        ModelId="claude-sonnet-4-5-20250929"
-    }
-});
+IChatClient client = new GenerativeAIChatClient("AIzaSyBXZVdHRG6u8f... please use your own key", "gemini-3-flash-preview");
+ChatClientAgent agent = new(client);
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 
@@ -51,8 +39,6 @@ AgentResponse response = await agent.RunAsync("Why is the sky blue?");
 long milliseconds = stopwatch.ElapsedMilliseconds;
 
 Console.WriteLine(response);
-Console.WriteLine();
-
 if (response.Usage != null)
 {
     Console.ForegroundColor = ConsoleColor.Magenta;
@@ -64,7 +50,9 @@ if (response.Usage != null)
     Console.WriteLine($"Total Tokens: {response.Usage.TotalTokenCount}");
     Console.ResetColor();
 }
+
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"Time spent: {milliseconds} ms");
 Console.ResetColor();
+
 ```
