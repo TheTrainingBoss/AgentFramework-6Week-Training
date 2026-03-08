@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grok4HelloWorld", "March_10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MistralHelloWorld", "March_10_2026\09-AgentFramework-Mistral\MistralHelloWorld\MistralHelloWorld.csproj", "{0214A3CC-A2EE-4622-BB91-CDF97CC361AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundryHelloWorld", "March_10_2026\10-AgentFramework-Foundry\FoundryHelloWorld\FoundryHelloWorld.csproj", "{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,18 @@ Global
 		{0214A3CC-A2EE-4622-BB91-CDF97CC361AF}.Release|x64.Build.0 = Release|Any CPU
 		{0214A3CC-A2EE-4622-BB91-CDF97CC361AF}.Release|x86.ActiveCfg = Release|Any CPU
 		{0214A3CC-A2EE-4622-BB91-CDF97CC361AF}.Release|x86.Build.0 = Release|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Debug|x64.Build.0 = Debug|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Debug|x86.Build.0 = Debug|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Release|x64.ActiveCfg = Release|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Release|x64.Build.0 = Release|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Release|x86.ActiveCfg = Release|Any CPU
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +127,7 @@ Global
 		{0DFF4502-A4E6-4504-9146-C221A1FAAFEB} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
 		{2E9F1E57-1E4A-4C53-97C4-D88FA3EEAAE9} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
 		{0214A3CC-A2EE-4622-BB91-CDF97CC361AF} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
+		{6CCFAC24-C6DB-4EE5-86B7-F4D8AE64D6E4} = {8E91D3F9-6643-5310-DD7C-A253A2276CBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4550BF05-1F6F-421D-8737-397CCB901517}

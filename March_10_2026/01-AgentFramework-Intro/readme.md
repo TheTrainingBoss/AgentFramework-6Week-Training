@@ -1,10 +1,17 @@
 ## Agent Framework Introduction
 
+The full open source framework is available [here](https://github.com/microsoft/agent-framework)
+
+Agent Framework combines AutoGen's simple agent abstractions with Semantic Kernel's enterprise features — session-based state management, type safety, middleware, telemetry — and adds graph-based workflows for explicit multi-agent orchestration.
+
+Semantic Kernel and AutoGen pioneered the concepts of AI agents and multi-agent orchestration. The Agent Framework is the direct successor, created by the same teams. It combines AutoGen's simple abstractions for single- and multi-agent patterns with Semantic Kernel's enterprise-grade features such as session-based state management, type safety, filters, telemetry, and extensive model and embedding support. Beyond merging the two, Agent Framework introduces workflows that give developers explicit control over multi-agent execution paths, plus a robust state management system for long-running and human-in-the-loop scenarios. In short, Agent Framework is the next generation of both Semantic Kernel and AutoGen.
+
+
 In this first introduction you will learn how to use the Microsoft Agent Framework to chat with an LLM using the following Large Language Models:
 - OpenAI
 - Azure OpenAI
 - Anthropic (Claude)
-- Foundry AI (gpt-4.1)
+- Foundry AI (gpt-5-mini)
 - Google (gemini-3-flash-preview)
 - Grok (grok-4-fast-non-reasoning")
 - Mistral (mistral-small-2506)
