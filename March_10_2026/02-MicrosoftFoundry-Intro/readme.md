@@ -1,5 +1,7 @@
 ## Introduction to Microsoft Foundry
 
+![Microsoft Foundry](../../media/Foundrylogo.png)
+
 Microsoft Foundry is Microsoft’s enterprise platform for building, customizing, and operating AI applications and AI agents at scale.
 
 It provides a complete development and operations environment for generative AI and intelligent agents, combining:
