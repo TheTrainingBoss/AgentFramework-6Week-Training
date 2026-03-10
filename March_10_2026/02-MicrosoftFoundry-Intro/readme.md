@@ -26,7 +26,7 @@ Enterprises are quickly adopting generative AI, but building real AI solutions r
 
 Organizations need to solve several challenges:
 
-1. Model Fragmentation
+1. **Model Fragmentation**
 
 Companies want to use multiple models such as:
 
@@ -38,7 +38,7 @@ Companies want to use multiple models such as:
 
 Managing these models independently creates complexity.
 
-2. Enterprise Security and Governance
+2. **Enterprise Security and Governance**
 
 Businesses must ensure:
 
@@ -54,7 +54,7 @@ Businesses must ensure:
 
 Standard AI APIs do not provide enterprise governance.
 
-3. AI Application Complexity
+3. **AI Application Complexity**
 
 Modern AI systems require:
 
@@ -72,7 +72,7 @@ Modern AI systems require:
 
 Building this infrastructure from scratch slows down innovation.
 
-4. Operationalizing AI
+4. **Operationalizing AI**
 
 Even after building an AI prototype, companies still need:
 
@@ -94,7 +94,7 @@ This is where most AI projects fail.
 
 Microsoft Foundry brings together multiple AI capabilities into a single development ecosystem.
 
-1. Unified Model Access
+1. **Unified Model Access**
 
 Foundry provides access to multiple AI models through a single development interface, including models from:
 
@@ -112,7 +112,7 @@ Foundry provides access to multiple AI models through a single development inter
 
 This allows enterprises to experiment, benchmark, and switch models easily.
 
-2. AI Application Development Framework
+2. **AI Application Development Framework**
 
 Developers can build intelligent systems with:
 
@@ -136,7 +136,7 @@ This enables the creation of:
 
 - automated decision systems
 
-3. Enterprise Data Integration
+3. **Enterprise Data Integration**
 
 Foundry connects AI models to enterprise data sources such as:
 
@@ -154,7 +154,7 @@ This allows AI to operate using trusted enterprise knowledge, enabling technique
 
 - semantic search
 
-4. Responsible AI and Governance
+4. **Responsible AI and Governance**
 
 Enterprises get built-in capabilities for:
 
@@ -170,7 +170,7 @@ Enterprises get built-in capabilities for:
 
 This ensures AI solutions meet enterprise and regulatory requirements.
 
-5. AI Operations (AIOps for AI)
+5. **AI Operations (AIOps for AI)**
 
 Foundry includes operational capabilities for AI systems:
 
@@ -190,13 +190,13 @@ This allows AI solutions to run reliably at enterprise scale.
 
 For enterprises, Foundry delivers value across four key dimensions.
 
-1. Accelerated AI Development
+1. **Accelerated AI Development**
 
 Instead of building AI infrastructure from scratch, teams can focus on creating business solutions.
 
 This reduces development time from months to weeks.
 
-2. Model Flexibility
+2. **Model Flexibility**
 
 Organizations are not locked into a single AI model.
 
@@ -210,7 +210,7 @@ They can easily switch between:
 
 This protects organizations from vendor lock-in and rapid model evolution.
 
-3. Enterprise-Grade Security
+3. **Enterprise-Grade Security**
 
 AI applications are built with the same security foundation as other Microsoft enterprise services, including:
 
@@ -222,7 +222,7 @@ AI applications are built with the same security foundation as other Microsoft e
 
 - compliance controls
 
-4. Production-Ready AI
+4. **Production-Ready AI**
 
 Foundry helps organizations move from AI experiments to production systems by providing:
 
