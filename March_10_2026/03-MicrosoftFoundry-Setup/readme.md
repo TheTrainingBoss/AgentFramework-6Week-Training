@@ -1,5 +1,7 @@
 ## Microsoft Foundry Setup
 
+![Foundry Screenshot](../../media/Foundry_Screenshot.jpg)
+
 You can start a Microsoft Foundry resource from `ai.azure.com` or from `portal.azure.com`
 
 We need two resources:
