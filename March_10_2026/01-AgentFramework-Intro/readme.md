@@ -1,5 +1,7 @@
 ## Agent Framework Introduction
 
+![Agent Framework Banner](../../media/AF-banner.png)
+
 The full open source framework is available [here](https://github.com/microsoft/agent-framework)
 
 Agent Framework combines AutoGen's simple agent abstractions with Semantic Kernel's enterprise features — session-based state management, type safety, middleware, telemetry — and adds graph-based workflows for explicit multi-agent orchestration.
