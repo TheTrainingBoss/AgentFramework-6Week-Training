@@ -90,6 +90,11 @@ Finally, you will also learn how to calculate the time it takes to run your quer
 ![Tokens Counter](../../media/Token_Counter.jpg)
 
 ## dotnet user-secrets
+
+> [!IMPORTANT]
+> For all the endpoints and the api keys, it is preferrable to use a mechanism to hide the these secrets from plain text in the project so you can use Azure Key Vault, .NET User Secrets, Environment variables or GitHub Secrets.
+> In these demos we wil use the .NET User Secrets
+
 - To initialize your user secrets in your project:
 
 ```cli
