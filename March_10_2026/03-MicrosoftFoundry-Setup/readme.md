@@ -1,4 +1,4 @@
-## Microsoft Foundry Setup
+# Microsoft Foundry Setup
 
 ![Foundry Screenshot](../../media/Foundry_Screenshot.jpg)
 
