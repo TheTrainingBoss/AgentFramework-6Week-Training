@@ -6,6 +6,26 @@ Agent Framework combines AutoGen's simple agent abstractions with Semantic Kerne
 
 Semantic Kernel and AutoGen pioneered the concepts of AI agents and multi-agent orchestration. The Agent Framework is the direct successor, created by the same teams. It combines AutoGen's simple abstractions for single- and multi-agent patterns with Semantic Kernel's enterprise-grade features such as session-based state management, type safety, filters, telemetry, and extensive model and embedding support. Beyond merging the two, Agent Framework introduces workflows that give developers explicit control over multi-agent execution paths, plus a robust state management system for long-running and human-in-the-loop scenarios. In short, Agent Framework is the next generation of both Semantic Kernel and AutoGen.
 
+Think of it as:
+
+**A managed, scalable runtime and orchestration layer for AI agents inside the Microsoft ecosystem.**
+
+| Capability             | What It Does                                    |
+| ---------------------- | ----------------------------------------------- |
+| Agent Hosting          | Secure runtime for long-lived agents            |
+| Identity & Auth        | Entra ID, RBAC, OAuth                           |
+| Tool Execution         | Calling APIs, functions, workflows              |
+| Memory                 | Persistent state, vector memory, grounding data |
+| Orchestration          | Multi-agent coordination                        |
+| Observability          | Telemetry, logging, tracing                     |
+| Safety & Governance    | Content filters, auditing, policy enforcement   |
+| Enterprise Integration | Microsoft Graph, M365, Dynamics, Fabric         |
+
+
+### What is the relationship between Agent Framework, Semantic Kernel and AutoGen
+
+![](../../media/AF_SK_AG.png)
+
 
 In this first introduction you will learn how to use the Microsoft Agent Framework to chat with an LLM using the following Large Language Models:
 - OpenAI

@@ -1,26 +1,65 @@
-# Mastering Microsoft Agent Framework
+# Welcome to Mastering Microsoft Agent Framework
 
-## What Is Microsoft Agent Framework?
+![Mastering MS Agent Framework](media/VSLiveAd.jpg)
 
-Microsoft Agent Framework is not a single open-source library.
-It’s a platform-level concept and set of capabilities Microsoft is building across Azure and Copilot to support enterprise-grade AI agents.
+Please find the agenda for the 6 weeks below:
 
-Think of it as:
+## March 10th (2 hours)
+- Introduction to Microsoft Agent Framework
+- Introduction to Microsoft Foundry
+- Demonstration of Microsoft Foundry Setup
+- Setup the first project for Microsoft Foundry
+    - OpenAI
+    - AzureOpenAI
+    - Anthropic Claude
+    - Google Gemini
+    - XAI Grok4
+    - Mistral
+- Tokenization
+- Office hour on March 12th
 
-**A managed, scalable runtime and orchestration layer for AI agents inside the Microsoft ecosystem.**
+## March 17th (2 hours)
+- Working with the Microsoft Agent Framework with local SLMs
+    - Ollama
+    - Foundry Local
+- Streaming responses
+- Working with Chat History (Agent Session)
+- Creating our first agent
+- Office hour on March 19th
 
-| Capability             | What It Does                                    |
-| ---------------------- | ----------------------------------------------- |
-| Agent Hosting          | Secure runtime for long-lived agents            |
-| Identity & Auth        | Entra ID, RBAC, OAuth                           |
-| Tool Execution         | Calling APIs, functions, workflows              |
-| Memory                 | Persistent state, vector memory, grounding data |
-| Orchestration          | Multi-agent coordination                        |
-| Observability          | Telemetry, logging, tracing                     |
-| Safety & Governance    | Content filters, auditing, policy enforcement   |
-| Enterprise Integration | Microsoft Graph, M365, Dynamics, Fabric         |
+## March 24th (2 hours)
+- Working with Tools
+    - Function Calls
+    - Code Interpreter
+    - Web Search Tool
+    - MCP Tool
+    - Agent as a tool
+- Structured Output
+- Office hour on March 26th
 
+## March 31st (2 hours)
+- Working with Embeddings
+- Working with Vector Stores
+- Working with Semantic Search
+- Working with Agent RAG Tools
+- Working with Reasoning Effort
+- Working with MultiModal
+    - Images
+    - PDF documents
+- Office hour on April 2nd
 
-### What is the relationship between Agent Framework, Semantic Kernel and AutoGen
+## April 7th (2 hours)
+- Working with AGUI (Agent User Interaction Protocop)
+    - AGUI Server
+    - AGUI Client
+- Working with DevUI
+- Working with Telemetry
+- Office hour on April 9th
 
-![](./media/AF_SK_AG.png)
+## April 14th (2 hours)
+- Working with Workflows
+    - Sequential Workflows
+    - Concurrent Workflows
+    - Handoff Workflows
+    - Human in the Loop Workflows
+- Wrap up
