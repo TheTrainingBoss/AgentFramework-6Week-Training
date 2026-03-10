@@ -1,4 +1,4 @@
-## Introduction to Microsoft Foundry
+# Introduction to Microsoft Foundry
 
 ![Microsoft Foundry](../../media/Foundrylogo.png)
 
