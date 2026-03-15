@@ -13,12 +13,13 @@ Please find the agenda for the 6 weeks below:
     - AzureOpenAI
     - Anthropic Claude
     - Google Gemini
-    - XAI Grok4
-    - Mistral
-- Tokenization
 - Office hour on March 12th
 
 ## March 17th (2 hours)
+- XAI Grok4
+- Mistral
+- Foundry AI
+- Tokenization
 - Working with the Microsoft Agent Framework with local SLMs
     - Ollama
     - Foundry Local
