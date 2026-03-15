@@ -6,8 +6,8 @@ dotnet new console -n OpenAIHelloWorld
 
 You will need to bring in two Nuget packages for this first Hello World sample to work:
 
-- `Azure.AI.OpenAI` it is still in beta, please use version `2.8.0-beta.1`
-- `Microsoft.Agent.AI.OpenAI` it is a release candidate, please use version `1.0.0-rc3`
+- `Azure.AI.OpenAI` it is still in beta, please use version `2.9.0-beta.1`
+- `Microsoft.Agent.AI.OpenAI` it is a release candidate, please use version `1.0.0-rc4`
 
 This is what your project file should look like:
 
@@ -20,8 +20,8 @@ This is what your project file should look like:
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="2.8.0-beta.1" />
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc3" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.9.0-beta.1" />
+    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc4" />
   </ItemGroup>
 </Project>
 ```

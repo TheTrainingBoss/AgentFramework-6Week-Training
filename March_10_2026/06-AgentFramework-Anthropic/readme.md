@@ -13,9 +13,9 @@ The content of the project file is below:
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-rc3" />
-    <PackageReference Include="Microsoft.Agents.AI.Anthropic" Version="1.0.0-rc3" />
-    <PackageReference Include="Microsoft.Extensions.AI" Version="10.3.0" />
+    <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-rc4" />
+    <PackageReference Include="Microsoft.Agents.AI.Anthropic" Version="1.0.0-rc4" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.4.0" />
   </ItemGroup>
 </Project>
 ```

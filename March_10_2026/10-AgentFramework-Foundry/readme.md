@@ -11,10 +11,10 @@ The content of the project file is below"
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Azure.AI.Projects" Version="2.0.0-beta.1" />
-    <PackageReference Include="Azure.Identity" Version="1.18.0" />
-    <PackageReference Include="Microsoft.Agents.AI.AzureAI" Version="1.0.0-rc3" />
-    <PackageReference Include="Azure.AI.OpenAI" Version="2.8.0-beta.1" />
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc3" />
+    <PackageReference Include="Azure.Identity" Version="1.19.0" />
+    <PackageReference Include="Microsoft.Agents.AI.AzureAI" Version="1.0.0-rc4" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.9.0-beta.1" />
+    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc4" />
   </ItemGroup>
 </Project>
 ```

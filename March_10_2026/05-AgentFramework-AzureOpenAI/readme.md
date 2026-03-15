@@ -42,10 +42,10 @@ This is how your project file should look like:
     <UserSecretsId>b277d57f-cd7f-44e5-b65f-60a3e528b5a3</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="2.8.0-beta.1" />
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc3" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.3" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.9.0-beta.1" />
+    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.5" />
   </ItemGroup>
 </Project>
 ```

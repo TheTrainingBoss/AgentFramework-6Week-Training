@@ -13,7 +13,7 @@ The content of the project file in below:
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc3" />
+    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-rc4" />
   </ItemGroup>
 </Project>
 ```

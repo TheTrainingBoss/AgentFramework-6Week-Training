@@ -14,8 +14,8 @@ The content of the project file is below:
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google_GenerativeAI.Microsoft" Version="3.6.3" />
-    <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-rc3" />
-    <PackageReference Include="Microsoft.Extensions.AI" Version="10.3.0" />
+    <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-rc4" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.4.0" />
   </ItemGroup>
 </Project>
 ```
