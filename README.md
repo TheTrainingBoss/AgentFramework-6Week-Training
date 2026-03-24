@@ -25,10 +25,10 @@ Please find the agenda for the 6 weeks below:
     - Foundry Local
 - Streaming responses
 - Working with Chat History (Agent Session)
-- Creating our first agent
 - Office hour on March 19th
 
 ## March 24th (2 hours)
+- Creating our first agent
 - Working with Tools
     - Function Calls
     - Code Interpreter
