@@ -28,7 +28,7 @@ ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent(
             PresencePenalty = 0.1f,
             FrequencyPenalty = 0.1f,
             MaxOutputTokens = 2500,
-            StopSequences = ["Observation:"],
+            //StopSequences = ["Observation:"]
         }
     });
 

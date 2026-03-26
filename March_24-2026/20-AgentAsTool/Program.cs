@@ -16,7 +16,7 @@ string apikey = config["apikey"]!;
 
 AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
 
-ChatClientAgent footballAgent = client.GetChatClient("gpt-5-mini").AsAIAgent(
+ChatClientAgent footballAgent = client.GetChatClient("gpt-4.1").AsAIAgent(
     instructions:"You are an expert in Football statistics. Use the date and time tool whenever current date/time context is required. Use the web search tool for any information that is not available in your training data. Always provide sources for your information.", 
     name:"Football Bot", 
     description:"Football Bot that provides current football statistics",
