@@ -33,19 +33,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingResponse", "March_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "March_24_2026", "March_24_2026", "{1F03BFE5-AF94-28A2-7119-43DEEC46D212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAgent", "March_24-2026\15-SimpleAgent\SimpleAgent\SimpleAgent.csproj", "{6CC0B9FA-434C-4844-8FC8-C127344077E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAgent", "March_24_2026\15-SimpleAgent\SimpleAgent\SimpleAgent.csproj", "{6CC0B9FA-434C-4844-8FC8-C127344077E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-FunctionCalls", "March_24-2026\16-FunctionCalls\01-FunctionCalls.csproj", "{53ED09E0-B7FC-41B4-B3BA-E3F5A7B005C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-FunctionCalls", "March_24_2026\16-FunctionCalls\01-FunctionCalls.csproj", "{53ED09E0-B7FC-41B4-B3BA-E3F5A7B005C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-CodeInterpreterTool", "March_24-2026\17-CodeInterpreterTool\02-CodeInterpreterTool.csproj", "{D16E3940-0575-4E7B-904D-0246DE5A38B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-CodeInterpreterTool", "March_24_2026\17-CodeInterpreterTool\02-CodeInterpreterTool.csproj", "{D16E3940-0575-4E7B-904D-0246DE5A38B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-WebSearchTool", "March_24-2026\18-WebSearchTool\03-WebSearchTool.csproj", "{F3775D6A-04B7-41C1-B3E6-C4D8200D35A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-WebSearchTool", "March_24_2026\18-WebSearchTool\03-WebSearchTool.csproj", "{F3775D6A-04B7-41C1-B3E6-C4D8200D35A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-MCPCalls", "March_24-2026\19-MCPCalls\04-MCPCalls.csproj", "{1337D1F7-0B0C-49D6-8153-AEE90D67DC17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-MCPCalls", "March_24_2026\19-MCPCalls\04-MCPCalls.csproj", "{1337D1F7-0B0C-49D6-8153-AEE90D67DC17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-AgentAsTool", "March_24-2026\20-AgentAsTool\05-AgentAsTool.csproj", "{D86FC5B7-A4D7-4F64-B1AF-E140759B32BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-AgentAsTool", "March_24_2026\20-AgentAsTool\05-AgentAsTool.csproj", "{D86FC5B7-A4D7-4F64-B1AF-E140759B32BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStructureOutput", "March_24-2026\21-SimpleStructureOutput\SimpleStructureOutput.csproj", "{C9150240-7E32-4465-9B00-21C5E51A1D0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStructureOutput", "March_24_2026\21-SimpleStructureOutput\SimpleStructureOutput.csproj", "{C9150240-7E32-4465-9B00-21C5E51A1D0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
