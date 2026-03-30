@@ -37,3 +37,14 @@ AgentResponse imageresponse = await agent.RunAsync(new ChatMessage(ChatRole.User
 ]));
 Console.WriteLine(imageresponse);
 
+if (imageresponse.Usage != null)
+{
+    Console.ForegroundColor = ConsoleColor.Magenta;
+    Console.WriteLine();
+    Console.WriteLine($"Input Tokens: {imageresponse.Usage.InputTokenCount}");
+    Console.WriteLine($"Cached Tokens: {imageresponse.Usage.CachedInputTokenCount ?? 0}");
+    Console.WriteLine($"Output Tokens: {imageresponse.Usage.OutputTokenCount}");
+    Console.WriteLine($"Reasoning Tokens: {imageresponse.Usage.ReasoningTokenCount ?? 0}");
+    Console.WriteLine($"Total Tokens: {imageresponse.Usage.TotalTokenCount}");
+    Console.ResetColor();
+}
