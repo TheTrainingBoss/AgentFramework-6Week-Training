@@ -47,9 +47,11 @@ Please find the agenda for the 6 weeks below:
 - Working with MultiModal
     - Images
     - PDF documents
+Working with Context Providers
 - Office hour on April 2nd
 
 ## April 7th (2 hours)
+- CosmosDB Chat History
 - Working with AGUI (Agent User Interaction Protocop)
     - AGUI Server
     - AGUI Client
