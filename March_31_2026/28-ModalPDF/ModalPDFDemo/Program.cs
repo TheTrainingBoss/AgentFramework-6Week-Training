@@ -18,7 +18,6 @@ string openaiapikey = config["openaikey"]!;
 
 // AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey), new AzureOpenAIClientOptions
 // {
-//     //EnableReasoningEfforts = true
 //     NetworkTimeout = TimeSpan.FromSeconds(60)
 // });
 
