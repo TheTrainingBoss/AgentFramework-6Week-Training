@@ -8,6 +8,7 @@ using Microsoft.Extensions.AI;
 using OpenAI.Responses;
 using System.Diagnostics;
 using System.ComponentModel;
+using OpenAI.Models;
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
 string endpoint = config["endpoint"]!;
@@ -26,22 +27,28 @@ AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCr
 //             AIFunctionFactory.Create(GetDateTimeUtc),
 //             new HostedWebSearchTool()
 //         ]);
- 
-// We have to use GetResponsesClient for Hosted tools to work but it is not 100% yet, a bit buggy as of Feb 2nd 2026
-#pragma warning disable OPENAI001
-    ChatClientAgent agent = client
-            .GetResponsesClient("gpt-5-mini")
-#pragma warning restore OPENAI001
-            .AsAIAgent(
-                instructions:"You are an AI assistant that helps people find information and you have access to the Web Search tool so use it for information that occured after your date of training.", 
-                tools:
-                [
-                    AIFunctionFactory.Create(GetDateTimeUtc),
-                    new HostedWebSearchTool()
-                ],
-                name:"LinoBot", 
-                description:"General current info Bot"
+
+// We have to use GetResponsesClient for Hosted tools to work but it is not 100% yet, a bit buggy as of April 1st 2026
+
+#pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+ChatClientAgent agent = client
+            .GetResponsesClient()  //As of rc5 the model has to be set in the AsAi Agent and NOT in the GetResponsesclient.
+            .AsAIAgent(model: "gpt-5", 
+                      options: new ChatClientAgentOptions
+                      {
+                        Name = "LinoBot",
+                        Description = "General current info Bot",
+                        ChatOptions = new ChatOptions
+                        {
+                            Instructions = "You are an AI assistant that helps people find information and you have access to the Web Search tool so use it for information that occured after your date of training.",
+                            Tools = [
+                             AIFunctionFactory.Create(GetDateTimeUtc),
+                                new HostedWebSearchTool()
+                            ]
+                        }
+                      }
             );
+#pragma warning restore OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 

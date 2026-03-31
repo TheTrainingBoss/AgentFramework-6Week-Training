@@ -2,8 +2,9 @@
 using Microsoft.Agents.AI;
 using Azure.Identity;
 using Azure.AI.Projects;
-using Azure.AI.Projects.OpenAI;
 using System.Diagnostics;
+using Microsoft.Agents.AI.AzureAI;
+using Azure.AI.Projects.Agents;
 
 AIProjectClient client = new (new Uri("https://AgentFrameworkCourse.services.ai.azure.com/api/projects/AgentframeworkProject"), new AzureCliCredential());
 
@@ -12,8 +13,10 @@ AgentVersionCreationOptions options = new(new PromptAgentDefinition("gpt-5-mini"
 
 AgentVersion createdAgentVersion = client.Agents.CreateAgentVersion(agentName: "MyAgent", options);
 
-// You can use an AIAgent with an already created server side agent version.
-AIAgent existingAgent = client.AsAIAgent(createdAgentVersion);
+#pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+FoundryAgent existingAgent = client.AsAIAgent(createdAgentVersion);
+//AIAgent existingAgent = client.AsAIAgent(createdAgentVersion);
+#pragma warning restore OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 

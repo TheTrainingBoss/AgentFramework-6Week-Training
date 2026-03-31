@@ -22,10 +22,11 @@ OpenAIClient client = new OpenAIClient(new ApiKeyCredential(openaikey));
 
 #pragma warning disable OPENAI001
     ChatClientAgent agent = client
-            .GetResponsesClient("gpt-5-mini")
-            .AsAIAgent(
+            .GetResponsesClient()  //As of RC5 the model has to be passed to the AsAIAgent NOT The GetResponsesClient
+            .AsAIAgent(model: "gpt-5", options:   
                 new ChatClientAgentOptions
                 {
+                    // = "gpt-5-mini",
                     Name = "ChartCodeBot",
                     Description = "Chart Code Bot",
                     ChatOptions = new ChatOptions

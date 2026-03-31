@@ -14,7 +14,7 @@ string apikey = config["apikey"]!;
 
 AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
 
-ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent(
+ChatClientAgent agent = client.GetChatClient("gpt-5").AsAIAgent(
     new ChatClientAgentOptions
     {
         Name = "PirateBot",
@@ -22,13 +22,13 @@ ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent(
         ChatOptions = new ChatOptions
         {
             Instructions = "Speak like a pirate",
-            Temperature = 0.2f,
+            Temperature = 1f,
             TopK = 5,
-            TopP = 0.9f,
-            PresencePenalty = 0.1f,
-            FrequencyPenalty = 0.1f,
+            //TopP = 0.9f, // unsuported parameter for gpt-5 as of now, will be added in the future
+            //PresencePenalty = 0.1f,  // unsuported parameter for gpt-5 as of now, will be added in the future
+            //FrequencyPenalty = 0.1f,  // unsuported parameter for gpt-5 as of now, will be added in the future
             MaxOutputTokens = 2500,
-            //StopSequences = ["Observation:"]
+            //StopSequences = ["Observation:"]  // unsuported parameter for gpt-5 as of now, will be added in the future
         }
     });
 

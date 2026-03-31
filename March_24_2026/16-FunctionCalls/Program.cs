@@ -25,13 +25,6 @@ ChatClientAgent agent = client.GetChatClient("gpt-4o").AsAIAgent(
         ChatOptions = new ChatOptions
         {
             Instructions = "You are a helpful bot that can call functions to get current weathers based on locations",
-            // Temperature = 0.2f,
-            // TopK = 5,
-            // TopP = 0.9f,
-            // PresencePenalty = 0.1f,
-            // FrequencyPenalty = 0.1f,
-            // MaxOutputTokens = 2500,
-            // StopSequences = ["Observation:"],
             Tools =
             [
                 AIFunctionFactory.Create(weatherTool.GetCurrentWeather, "get_weather", "Get the current weather for a given location."),
