@@ -1,5 +1,7 @@
 # Welcome to Mastering Microsoft Agent Framework
 
+## Congratulations! Agent Framework went GA 1.0.0 on April 3rd 2026
+
 ![Mastering MS Agent Framework](media/VSLiveAd.jpg)
 
 Please find the agenda for the 6 weeks below:
