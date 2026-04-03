@@ -2,7 +2,7 @@
 
 ## Congratulations! Agent Framework went GA 1.0.0 on April 3rd 2026
 
-![Congratulations](../AgentFramework-6Week-Training/media/Celebrating_AG_GA.png)
+![Congratulations](media/Celebrating_AG_GA.png)
 
 ![Mastering MS Agent Framework](media/VSLiveAd.jpg)
 
