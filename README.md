@@ -56,7 +56,8 @@ Please find the agenda for the 6 weeks below:
 
 ## April 7th (2 hours)
 - CosmosDB Chat History
-- Working with AGUI (Agent User Interaction Protocop)
+- CosmosDB Semantic Caching
+- Working with AGUI (Agent User Interaction Protocol)
     - AGUI Server
     - AGUI Client
 - Working with DevUI
