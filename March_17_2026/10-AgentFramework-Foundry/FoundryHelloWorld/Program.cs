@@ -3,19 +3,23 @@ using Microsoft.Agents.AI;
 using Azure.Identity;
 using Azure.AI.Projects;
 using System.Diagnostics;
-using Microsoft.Agents.AI.AzureAI;
+using Microsoft.Agents.AI.Foundry;
 using Azure.AI.Projects.Agents;
 
 AIProjectClient client = new (new Uri("https://AgentFrameworkCourse.services.ai.azure.com/api/projects/AgentframeworkProject"), new AzureCliCredential());
 
 // Define the agent you want to create. (Prompt Agent in this case)
-AgentVersionCreationOptions options = new(new PromptAgentDefinition("gpt-5-mini") { Instructions = "You are a helpful assistant." });
+ProjectsAgentVersionCreationOptions options = new(
+    new DeclarativeAgentDefinition(model: "gpt-5-mini")
+    {
+        Instructions = "You are a helpful assistant.",
+    }
+);
 
-AgentVersion createdAgentVersion = client.Agents.CreateAgentVersion(agentName: "MyAgent", options);
+ProjectsAgentVersion createdAgentVersion = await client.AgentAdministrationClient.CreateAgentVersionAsync("MyAgent", options);
 
 #pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 FoundryAgent existingAgent = client.AsAIAgent(createdAgentVersion);
-//AIAgent existingAgent = client.AsAIAgent(createdAgentVersion);
 #pragma warning restore OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 
 Stopwatch stopwatch = Stopwatch.StartNew();
