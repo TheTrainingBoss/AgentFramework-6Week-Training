@@ -15,7 +15,7 @@ string cosmosKey = config["cosmosdbKey"]!;
 
 var cosmosClient = new CosmosClient(cosmosEndpoint, cosmosKey);
 
-var database = cosmosClient.GetDatabase("CosmosDBConference2026");
+var database = cosmosClient.GetDatabase("AgentFramework");
 var container = database.GetContainer("cache");
 
 AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));

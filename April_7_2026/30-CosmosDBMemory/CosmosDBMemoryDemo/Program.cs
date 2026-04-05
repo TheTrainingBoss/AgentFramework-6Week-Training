@@ -16,7 +16,7 @@ string cosmosdbKey = config["cosmosdbKey"]!;
 
 var cosmosClient = new CosmosClient(cosmosdbEndpoint, cosmosdbKey);
 
-var database = cosmosClient.GetDatabase("AgentFramework");
+var database = cosmosClient.GetDatabase("AgentFramework"); 
 var container = database.GetContainer("chathistory");
 
 string conversationId = "LinoConversation"; //This is where you will have to decide on the conversationId strategy that best fits your scenario, it can be a fixed value for single conversation scenarios or something more dynamic like a session id or a combination of tenantId+userId for multi-tenant/multi-user scenarios. The important thing is that this value is used consistently across calls so that the chat history can be retrieved correctly.
@@ -47,7 +47,7 @@ var agentOptions = new ChatClientAgentOptions();
 agentOptions.ChatHistoryProvider = historyProvider;
 agentOptions.AIContextProviders = [compactionProvider];
 
-string question =  "What are the top 10 Movies according to IMDB?"; //"ok can you give the top 5 only";
+string question =  "ok can you give the top 5 only"; // What are the top 10 Movies according to IMDB?"; //"ok can you give the top 5 only";
 
 AIAgent agent = client
     .GetChatClient("gpt-5")
