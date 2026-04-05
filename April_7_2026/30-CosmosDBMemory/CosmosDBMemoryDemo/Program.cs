@@ -14,10 +14,7 @@ string apikey = config["apikey"]!;
 string cosmosdbEndpoint = config["cosmosdbEndpoint"]!;
 string cosmosdbKey = config["cosmosdbKey"]!;
 
-var cosmosClient = new CosmosClient(
-    cosmosdbEndpoint,
-    cosmosdbKey
-);
+var cosmosClient = new CosmosClient(cosmosdbEndpoint, cosmosdbKey);
 
 var database = cosmosClient.GetDatabase("AgentFramework");
 var container = database.GetContainer("chathistory");

@@ -24,7 +24,7 @@ IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client
             .GetEmbeddingClient("text-embedding-3-small")
             .AsIEmbeddingGenerator();
 
-string question =   "What are the top 10 Movies according to IMDB?"; //"ok can you give the top 5 only"; "Why is the sky blue?";
+string question =   "What are the top 10 Movies according to IMDB?";
 var embedding = await embeddingGenerator.GenerateAsync(question);
 
 AIAgent agent = client
