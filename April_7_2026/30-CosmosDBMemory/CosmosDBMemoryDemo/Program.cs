@@ -1,6 +1,5 @@
 ﻿using Microsoft.Agents;
 using Microsoft.Agents.AI;
-using Newtonsoft.Json;
 using Microsoft.Extensions.Configuration;
 using Azure.AI.OpenAI;
 using System.ClientModel;
@@ -9,9 +8,15 @@ using Microsoft.Agents.AI.Compaction;
 using Microsoft.Extensions.AI;
 using OpenAI.Chat;
 
+IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+string endpoint = config["endpoint"]!;
+string apikey = config["apikey"]!;
+string cosmosdbEndpoint = config["cosmosdbEndpoint"]!;
+string cosmosdbKey = config["cosmosdbKey"]!;
+
 var cosmosClient = new CosmosClient(
-    "<enter-your-cosmos-endpoint-here>",
-    "<enter-your-cosmos-account-key-here>"
+    cosmosdbEndpoint,
+    cosmosdbKey
 );
 
 var database = cosmosClient.GetDatabase("AgentFramework");
@@ -30,10 +35,6 @@ var historyProvider = new CosmosChatHistoryProvider(
     ),
     ownsClient: false
 );
-
-IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
-string endpoint = config["endpoint"]!;
-string apikey = config["apikey"]!;
 
 AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
 
