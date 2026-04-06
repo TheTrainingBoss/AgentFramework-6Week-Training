@@ -47,7 +47,7 @@ var agentOptions = new ChatClientAgentOptions();
 agentOptions.ChatHistoryProvider = historyProvider;
 agentOptions.AIContextProviders = [compactionProvider];
 
-string question =  "ok can you give the top 5 only"; // What are the top 10 Movies according to IMDB?"; //"ok can you give the top 5 only";
+string question =  "What are the top 10 Movies according to IMDB?"; //"ok can you give the top 5 only";
 
 AIAgent agent = client
     .GetChatClient("gpt-5")
