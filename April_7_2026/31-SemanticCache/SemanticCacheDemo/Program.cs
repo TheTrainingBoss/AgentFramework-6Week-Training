@@ -3,7 +3,6 @@ using Microsoft.Extensions.Configuration;
 using Azure.AI.OpenAI;
 using System.ClientModel;
 using Microsoft.Azure.Cosmos;
-using Microsoft.Agents.AI.Compaction;
 using Microsoft.Extensions.AI;
 using OpenAI.Chat;
 

@@ -2,10 +2,8 @@
 using System.ClientModel;
 using Microsoft.Extensions.Configuration;   
 using Azure.AI.OpenAI;
-using OpenAI;
 using OpenAI.Chat;
 using System.Diagnostics;
-using System.ComponentModel;
 using Microsoft.Extensions.AI;
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();

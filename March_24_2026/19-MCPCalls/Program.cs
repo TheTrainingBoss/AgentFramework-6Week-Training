@@ -3,11 +3,9 @@ using System.ClientModel;
 using Microsoft.Extensions.Configuration;   
 using Microsoft.Extensions.AI;
 using Azure.AI.OpenAI;
-using OpenAI;
 using OpenAI.Chat;
 using System.Diagnostics;
 using ModelContextProtocol.Client;
-using System.Security.AccessControl;
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
 string endpoint = config["endpoint"]!;

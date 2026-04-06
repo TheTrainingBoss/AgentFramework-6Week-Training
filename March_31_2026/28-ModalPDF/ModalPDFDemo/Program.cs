@@ -6,9 +6,7 @@ using OpenAI.Responses;
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Configuration;
-using Azure;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
-using System.Text;
 
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();

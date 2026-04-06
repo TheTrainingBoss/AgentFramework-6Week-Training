@@ -8,7 +8,6 @@ using Microsoft.Extensions.VectorData;
 using Microsoft.SemanticKernel.Connectors.AzureAISearch;
 using Azure.Search.Documents.Indexes;
 using Azure;
-using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 using System.Text;
 
 

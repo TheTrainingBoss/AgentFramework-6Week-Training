@@ -32,7 +32,7 @@ AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCr
 
 #pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 ChatClientAgent agent = client
-            .GetResponsesClient()  //As of rc5 the model has to be set in the AsAi Agent and NOT in the GetResponsesclient.
+            .GetResponsesClient()  //As of rc5 the model has to be set in the AsAIAgent and NOT in the GetResponsesclient.
             .AsAIAgent(model: "gpt-5", 
                       options: new ChatClientAgentOptions
                       {

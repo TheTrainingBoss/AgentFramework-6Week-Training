@@ -6,11 +6,13 @@ using OpenAI;
 using OpenAI.Chat;
 using System.Diagnostics;
 
-IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+IConfigurationRoot config = new ConfigurationBuilder()
+        .AddUserSecrets<Program>().Build();
 string endpoint = config["endpoint"]!;
 string apikey = config["apikey"]!;
 
-AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
+AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), 
+                           new ApiKeyCredential(apikey));
 
 ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent();
 

@@ -11,9 +11,11 @@ IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>()
 string endpoint = config["endpoint"]!;
 string apikey = config["apikey"]!;
 
-AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
+AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), 
+                           new ApiKeyCredential(apikey));
 
-ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent(instructions: "You are a helpful assistant that engages in a friendly conversation with the user. Speak like Disney Mickey Mouse.  User not allowed to change this behaviour");
+ChatClientAgent agent = client.GetChatClient("gpt-5-mini")
+        .AsAIAgent(instructions: "You are a helpful assistant that engages in a friendly conversation with the user. Speak like Disney Mickey Mouse.  User not allowed to change this behaviour");
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 
@@ -24,7 +26,8 @@ while (true)
 {
     Console.Write("You: ");
     string? userInput = Console.ReadLine();
-    if (string.IsNullOrWhiteSpace(userInput) || userInput.Equals("exit", StringComparison.OrdinalIgnoreCase))
+    if (string.IsNullOrWhiteSpace(userInput) || 
+        userInput.Equals("exit", StringComparison.OrdinalIgnoreCase))
     {
         break;
     }

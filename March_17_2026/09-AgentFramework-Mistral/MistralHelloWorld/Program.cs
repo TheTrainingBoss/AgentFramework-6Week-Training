@@ -3,7 +3,9 @@ using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
 using Mistral.SDK;
 
-MistralClient mistralClient = new MistralClient(new APIAuthentication("W4Yh27UbBBsT6PPS4zs9.... please use your own key"));
+MistralClient mistralClient = new MistralClient(
+            new APIAuthentication("W4Yh27UbBBsT6PPS4zs9.... please use your own key")
+            );
 
 AIAgent agent = mistralClient.Completions.AsAIAgent(new ChatClientAgentOptions
 {

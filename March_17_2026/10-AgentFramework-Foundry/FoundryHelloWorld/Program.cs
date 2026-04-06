@@ -6,7 +6,10 @@ using System.Diagnostics;
 using Microsoft.Agents.AI.Foundry;
 using Azure.AI.Projects.Agents;
 
-AIProjectClient client = new (new Uri("https://AgentFrameworkCourse.services.ai.azure.com/api/projects/AgentframeworkProject"), new AzureCliCredential());
+AIProjectClient client = new (
+        new Uri("<Enter your full Project URI Endpoint>"), 
+        new AzureCliCredential()
+    );
 
 // Define the agent you want to create. (Prompt Agent in this case)
 ProjectsAgentVersionCreationOptions options = new(
@@ -16,11 +19,14 @@ ProjectsAgentVersionCreationOptions options = new(
     }
 );
 
-ProjectsAgentVersion createdAgentVersion = await client.AgentAdministrationClient.CreateAgentVersionAsync("MyAgent", options);
+ProjectsAgentVersion createdAgentVersion = 
+    await client.AgentAdministrationClient.CreateAgentVersionAsync("MyAgent", options);
 
-#pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+// Type is for evaluation purposes only and is subject to change or 
+// removal in future updates. Suppress this diagnostic to proceed.
+#pragma warning disable OPENAI001 
 FoundryAgent existingAgent = client.AsAIAgent(createdAgentVersion);
-#pragma warning restore OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+#pragma warning restore OPENAI001 
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 

@@ -1,5 +1,4 @@
-﻿
-using Microsoft.Agents.AI;
+﻿using Microsoft.Agents.AI;
 using System.ClientModel;
 using Microsoft.Extensions.Configuration;
 using Azure.AI.OpenAI;

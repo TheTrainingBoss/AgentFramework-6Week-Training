@@ -5,12 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Azure.AI.OpenAI;
 using OpenAI;
 using OpenAI.Chat;
-using System.Diagnostics;
-using ChatResponseFormat = Microsoft.Extensions.AI.ChatResponseFormat;
 using StructuredOutput.Models;
-using System.Text.Json;
-using System.Text.Json.Serialization.Metadata;
-using System.Text.Json.Serialization;
 using Microsoft.Extensions.AI;
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();

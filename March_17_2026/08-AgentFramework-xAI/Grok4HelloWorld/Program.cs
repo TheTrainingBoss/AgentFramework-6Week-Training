@@ -4,10 +4,12 @@ using Microsoft.Agents.AI;
 using OpenAI;
 using OpenAI.Chat;
 
-OpenAIClient client = new (new ApiKeyCredential("xai-LFAYlBktn3NWdaLbalASh4aRJb5ycSpVulIdeH8tmicm... please use your own key"), new OpenAIClientOptions
-{
-    Endpoint = new Uri("https://api.x.ai/v1")
-});
+OpenAIClient client = new(
+        new ApiKeyCredential(
+        "xai-LFAYlBktn3NWdaLbalASh4aRJb5ycSpVulIdeH8tmicm... please use your own key"), 
+        new OpenAIClientOptions{
+            Endpoint = new Uri("https://api.x.ai/v1")
+        });
 
 ChatClientAgent agent = client.GetChatClient("grok-4-fast-non-reasoning").AsAIAgent();
 

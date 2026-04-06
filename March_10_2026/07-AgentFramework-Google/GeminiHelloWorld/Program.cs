@@ -4,7 +4,10 @@ using Microsoft.Agents.AI;
 using System.Diagnostics;
 
 
-IChatClient client = new GenerativeAIChatClient("AIzaSyBXZVdHRG6u8f... please use your own key", "gemini-3-flash-preview");
+IChatClient client = new GenerativeAIChatClient(
+                        "AIzaSyBXZVdHRG6u8f... please use your own key", 
+                        "gemini-3-flash-preview"
+                        );
 ChatClientAgent agent = new(client);
 
 Stopwatch stopwatch = Stopwatch.StartNew();

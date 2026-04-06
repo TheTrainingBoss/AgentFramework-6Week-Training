@@ -10,7 +10,10 @@ IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>()
 string endpoint = config["endpoint"]!;
 string apikey = config["apikey"]!;
 
-AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
+AzureOpenAIClient client = new AzureOpenAIClient(
+                                new Uri(endpoint), 
+                                new ApiKeyCredential(apikey)
+                                );
 
 ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent();
 
