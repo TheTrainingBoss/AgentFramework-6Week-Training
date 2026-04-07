@@ -1,8 +1,10 @@
 # Welcome to Mastering Microsoft Agent Framework
 
-## Congratulations! Agent Framework went GA 1.0.0 on April 3rd 2026
+## Congratulations to all my students for completing the 6-week seminar
+I am very proud of you all.
+As a token of my appreciation I am offering all the students of the seminar `75% off` on my Video course [Mastering Microsoft Agent Framework](https://thetrainingboss.com/course/microsoft-agent-framework-fundamentals-csharp/) for one year subscription.  [Please contact me to receive your coupon](https://thetrainingboss.com/contact). This will include all the new changes and new topics for 1 year period.
 
-![Congratulations](media/Celebrating_AG_GA.png)
+![Congratulations](media/ThankYou_Certificate1.png)
 
 ![Mastering MS Agent Framework](media/VSLiveAd.jpg)
 
