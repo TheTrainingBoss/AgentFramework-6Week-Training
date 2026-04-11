@@ -15,17 +15,20 @@ string apikey = config["apikey"]!;
 
 AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));
 
-ChatClientAgent footballAgent = client.GetChatClient("gpt-5-mini").AsAIAgent(
+#pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+ChatClientAgent footballAgent = client.GetResponsesClient().AsAIAgent(model: "gpt-5-mini",
     instructions:"You are an expert in Football statistics. Use the date and time tool whenever current date/time context is required. Use the web search tool for any information that is not available in your training data. Always provide sources for your information.", 
     name:"Football Bot", 
     description:"Football Bot that provides current football statistics",
     tools:
     [
         AIFunctionFactory.Create(GetDateTimeUtc, "get_current_datetime", "Get the current date and time in UTC."),
-       new HostedWebSearchTool()
+        new HostedWebSearchTool()
     ]);
+#pragma warning restore OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 
-AIAgent agent = client.GetChatClient("gpt-5").AsAIAgent(
+#pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+AIAgent agent = client.GetResponsesClient().AsAIAgent(model: "gpt-5",
     instructions: "You are a helpful assistant. Refer all requests about football statistics to the Football Bot.",
     name: "Main Agent",
     description: "An assistant that provides weather information and football statistics.",
@@ -33,11 +36,11 @@ AIAgent agent = client.GetChatClient("gpt-5").AsAIAgent(
     ).AsBuilder()
     .Use(Middleware)
     .Build();
+#pragma warning restore OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 
-// AgentResponse response = await agent.RunAsync("Why is the sky blue?");  //How many games per season are played in the english Premier League of Football?");
-AgentResponse response = await agent.RunAsync("How many games are played in the premier league?");
+AgentResponse response = await agent.RunAsync("How many games per season are played in the premier league by all teams?");
 
 long milliseconds = stopwatch.ElapsedMilliseconds;
 
