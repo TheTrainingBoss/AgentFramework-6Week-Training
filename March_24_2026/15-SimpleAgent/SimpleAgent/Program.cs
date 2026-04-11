@@ -22,11 +22,11 @@ ChatClientAgent agent = client.GetChatClient("gpt-5").AsAIAgent(
             Instructions = "Speak like a pirate",
             Temperature = 1f,
             TopK = 5,
-            //TopP = 0.9f, // unsuported parameter for gpt-5 as of now, will be added in the future
-            //PresencePenalty = 0.1f,  // unsuported parameter for gpt-5 as of now, will be added in the future
-            //FrequencyPenalty = 0.1f,  // unsuported parameter for gpt-5 as of now, will be added in the future
+            //TopP = 0.9f, // unsupported parameter for gpt-5 as of now, will be added in the future
+            //PresencePenalty = 0.1f,  // unsupported parameter for gpt-5 as of now, will be added in the future
+            //FrequencyPenalty = 0.1f,  // unsupported parameter for gpt-5 as of now, will be added in the future
             MaxOutputTokens = 2500,
-            //StopSequences = ["Observation:"]  // unsuported parameter for gpt-5 as of now, will be added in the future
+            //StopSequences = ["Observation:"]  // unsupported parameter for gpt-5 as of now, will be added in the future
         }
     });
 

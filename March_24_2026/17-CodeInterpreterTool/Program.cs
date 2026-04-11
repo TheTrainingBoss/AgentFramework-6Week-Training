@@ -1,32 +1,31 @@
 ﻿using Microsoft.Agents.AI;
 using Microsoft.Extensions.Configuration;
 using System.ClientModel;
-using System.Text;
 using Microsoft.Extensions.AI;
-using OpenAI;
 using OpenAI.Chat;
 using OpenAI.Responses;
 using OpenAI.Containers;
 using System.Diagnostics;
 using System.ComponentModel;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
+using Azure.AI.OpenAI;
+using OpenAI;
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
 string endpoint = config["endpoint"]!;
 string apikey = config["apikey"]!;
 string openaikey = config["openaikey"]!;
 
-//AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));  //Does not work with Azure OpenAI, only with OpenAI currently as of Feb 2nd 2026
+AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apikey));  //Does not work with Azure OpenAI, only with OpenAI currently as of Feb 2nd 2026
 
-OpenAIClient client = new OpenAIClient(new ApiKeyCredential(openaikey));
+//OpenAIClient client = new OpenAIClient(new ApiKeyCredential(openaikey));
 
 #pragma warning disable OPENAI001
     ChatClientAgent agent = client
-            .GetResponsesClient()  //As of RC5 the model has to be passed to the AsAIAgent NOT The GetResponsesClient
+            .GetResponsesClient() 
             .AsAIAgent(model: "gpt-5", options:   
                 new ChatClientAgentOptions
                 {
-                    // = "gpt-5-mini",
                     Name = "ChartCodeBot",
                     Description = "Chart Code Bot",
                     ChatOptions = new ChatOptions

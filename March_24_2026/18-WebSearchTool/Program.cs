@@ -3,12 +3,10 @@ using Microsoft.Agents.AI;
 using OpenAI.Chat;
 using Microsoft.Extensions.Configuration;
 using System.ClientModel;
-using System.Text;
 using Microsoft.Extensions.AI;
 using OpenAI.Responses;
 using System.Diagnostics;
 using System.ComponentModel;
-using OpenAI.Models;
 
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
 string endpoint = config["endpoint"]!;
@@ -32,7 +30,7 @@ AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCr
 
 #pragma warning disable OPENAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 ChatClientAgent agent = client
-            .GetResponsesClient()  //As of rc5 the model has to be set in the AsAIAgent and NOT in the GetResponsesclient.
+            .GetResponsesClient()
             .AsAIAgent(model: "gpt-5", 
                       options: new ChatClientAgentOptions
                       {
@@ -40,9 +38,9 @@ ChatClientAgent agent = client
                         Description = "General current info Bot",
                         ChatOptions = new ChatOptions
                         {
-                            Instructions = "You are an AI assistant that helps people find information and you have access to the Web Search tool so use it for information that occured after your date of training.",
+                            Instructions = "You are an AI assistant that helps people find information. You MUST use the web_search tool to look up any real-world events, scores, news, or facts. NEVER say you cannot search - always use your web search tool first.",
                             Tools = [
-                             AIFunctionFactory.Create(GetDateTimeUtc),
+                                AIFunctionFactory.Create(GetDateTimeUtc),
                                 new HostedWebSearchTool()
                             ]
                         }
@@ -77,3 +75,4 @@ static DateTime GetDateTimeUtc()
 {
     return DateTime.UtcNow;
 }
+

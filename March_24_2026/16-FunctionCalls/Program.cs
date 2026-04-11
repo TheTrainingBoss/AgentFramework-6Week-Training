@@ -17,7 +17,7 @@ AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCr
 Weather weatherTool = new Weather();
 MyDateTime dateTimeTool = new MyDateTime();
 
-ChatClientAgent agent = client.GetChatClient("gpt-4o").AsAIAgent(
+ChatClientAgent agent = client.GetChatClient("gpt-5-mini").AsAIAgent(
     new ChatClientAgentOptions
     {
         Name = "Weather Bot",

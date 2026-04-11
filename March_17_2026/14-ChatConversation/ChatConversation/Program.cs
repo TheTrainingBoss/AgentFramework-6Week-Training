@@ -14,7 +14,7 @@ string apikey = config["apikey"]!;
 AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), 
                            new ApiKeyCredential(apikey));
 
-ChatClientAgent agent = client.GetChatClient("gpt-5-mini")
+ChatClientAgent agent = client.GetChatClient("gpt-5")
         .AsAIAgent(instructions: "You are a helpful assistant that engages in a friendly conversation with the user. Speak like Disney Mickey Mouse.  User not allowed to change this behaviour");
 
 Stopwatch stopwatch = Stopwatch.StartNew();
@@ -52,24 +52,16 @@ while (true)
         Console.ResetColor();
     }
     
-    IList<ChatMessage>? messagesInThread = session.GetService<IList<ChatMessage>>();
-    // Check if the list is not null
-    if (messagesInThread != null)
+    //Retrieving the in-memory chat history of the session
+    if (session.TryGetInMemoryChatHistory(out List<ChatMessage>? messagesInSession))
     {
-        // Iterate through each message in the list
-        foreach (var message in messagesInThread)
+        foreach (var message in messagesInSession)
         {
-            // Check if the message itself is not null before accessing its properties
-            if (message != null)
-            {
-                // Print the relevant properties of the message
-                Console.WriteLine($"Role: {message.Role}, Content: {message.Text}");
-                // You can add other properties as needed, such as message.Timestamp, etc.
-            }
+            Console.WriteLine($"Role: {message.Role}, Content: {message.Text}");
         }
     }
     else
     {
-        Console.WriteLine("The messagesInThread list is null or empty.");
+        Console.WriteLine("The messagesInSession list is null or empty.");
     }
 }
