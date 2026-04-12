@@ -68,8 +68,10 @@ Please find the agenda for the 6 weeks below:
 
 ## April 14th (2 hours)
 - Working with Workflows
+    - Workflows without AI
     - Sequential Workflows
     - Concurrent Workflows
     - Handoff Workflows
+    - GroupChat Workflows
     - Human in the Loop Workflows
 - Wrap up
