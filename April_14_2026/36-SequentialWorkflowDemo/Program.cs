@@ -21,6 +21,11 @@ ChatClientAgent translationAgent = chatClient.AsAIAgent(name: "TranslationAgent"
 
 Workflow workflow = AgentWorkflowBuilder.BuildSequential(summaryAgent, translationAgent);
 
+// I could have built the workflow by adding executors and connecting them
+// var workflow = new WorkflowBuilder(summaryAgent)
+//     .AddEdge(summaryAgent, translationAgent)
+//     .Build();
+
 string patentdoc = """
           This Software Patent Agreement (“Agreement”) is entered into as of the Effective Date by and 
           between the Patent Holder and the Licensee for the purpose of defining the terms under which 
@@ -49,9 +54,9 @@ var messages = new List<ChatMessage> { new(ChatRole.User, patentdoc) };
 //Returns a StreamingRun handle you can use to interact with the execution.
 StreamingRun run = await InProcessExecution.RunStreamingAsync(workflow, messages);
 
-//Sends a turn token to the workflow to kick off processing. 
-//emitEvents: true tells the runtime to emit WorkflowEvent objects 
-//as it progresses, which you can observe via the stream.
+// Must send the turn token to trigger the agents.
+// The agents are wrapped as executors. When they receive messages,
+// they will cache the messages and only start processing when they receive a TurnToken.
 await run.TrySendMessageAsync(new TurnToken(emitEvents: true));
 
 List<ChatMessage> result = [];
