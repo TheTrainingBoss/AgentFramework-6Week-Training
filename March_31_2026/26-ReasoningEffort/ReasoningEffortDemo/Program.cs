@@ -17,7 +17,7 @@ AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCr
 
 // This is set to the default of Medium for reasonning efforts
 ChatClientAgent agent = client
-        .GetChatClient("gpt-5-mini")
+        .GetChatClient("gpt-5")
         .AsAIAgent();
 
 AgentResponse response = await agent.RunAsync("Who is Bill Gates? and where was he born?");
@@ -29,7 +29,7 @@ Console.WriteLine("Reasoning Token Count: " + response.Usage?.ReasoningTokenCoun
 //Let's take control of the reasonning efforts
 
 ChatClientAgent agentwithreasoningeffort = client
-        .GetChatClient("gpt-5-mini")
+        .GetChatClient("gpt-5")
         .AsAIAgent(
             //reasoningEffortLevel: ReasoningEffortLevel.Low  //Yeah no, not that easy :) 
             options: new ChatClientAgentOptions
