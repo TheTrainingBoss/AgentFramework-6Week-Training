@@ -16,7 +16,8 @@ AzureOpenAIClient client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCr
 
 ChatClient chatClient = client.GetChatClient("gpt-5");
 
-ChatClientAgent supervisor = client.GetChatClient("gpt-5-mini").AsAIAgent(name: "Supervisor", instructions: "Determine what type of question was asked. Never answer yourself");
+//No supervisor needed for this pattern since the group chat manager will handle turn taking and ensure each agent responds in order
+//ChatClientAgent supervisor = client.GetChatClient("gpt-5-mini").AsAIAgent(name: "Supervisor", instructions: "Determine what type of question was asked. Never answer yourself");
 
 ChatClientAgent movieConnesseur = client.GetChatClient("gpt-5").AsAIAgent(name: "MovieConnesseur", instructions: "You are a Movie Connesseur");
 ChatClientAgent musicConnesseur = client.GetChatClient("gpt-5").AsAIAgent(name: "MusicConnesseur", instructions: "You are a Music Connesseur");
