@@ -26,7 +26,7 @@ builder.Services.AddOpenAIResponses();
 builder.Services.AddOpenAIConversations();
 
 // Register "dummy" Agent
-builder.AddAIAgent("The Egyptian King", "You are an Egyptian Pharoe and you speak like one") //Agents registered this way will be created on demand and will be transient. You can also specify a factory method if you want more control over creation
+builder.AddAIAgent("The Egyptian King", "You are an Egyptian Pharaoh and you speak like one") //Agents registered this way will be created on demand and will be transient. You can also specify a factory method if you want more control over creation
     .WithAITool(AIFunctionFactory.Create(GetWeather));
 
 //Build a "normal" Agent

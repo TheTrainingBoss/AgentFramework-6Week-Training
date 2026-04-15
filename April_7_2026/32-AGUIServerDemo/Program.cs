@@ -30,5 +30,5 @@ await app.RunAsync();
 //Server-Tool
 static string GetWeather(string city)
 {
-    return "It is sunny and 69 degrees";
+    return "It is sunny and 72 degrees";
 }
